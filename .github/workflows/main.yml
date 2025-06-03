@@ -12,7 +12,7 @@ jobs:
     # Setting up environment
     steps:
       - name: Checkout code
-        uses: actions/checkout@2
+        uses: actions/checkout@3
 
       - name: Setup Pyhton
         uses: actions/setup-python@v2
