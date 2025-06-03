@@ -53,3 +53,16 @@ jobs:
       - name: Push Docker Image
         run: |
           docker push altamsh/note-app:${{  env.VERSION }}
+      # Update Menifest file
+      - name: Update k8s Menifests
+        run: |
+          sed -i 's/image: altamsh/note-app:*/image: altamsh/note-app:${{ env.VERSION }}/' k8s/deployment.yml
+
+      # update GitHub
+      - name: Commit the changes
+        run: |
+          git config --global user.email "<>"
+          git config --global user.name "GitHub Actions Bot"
+          git add k8s/deploy.yml
+          gi commit -m "Update deployment with new image version -${{ env.VERSION }}"
+          git push origin main
