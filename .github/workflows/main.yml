@@ -56,7 +56,7 @@ jobs:
       # Update Menifest file
       - name: Update k8s Menifests
         run: |
-          sed -i 's|image: altamsh/note-app:.*|image: altamsh/note-app:${{ env.VERSION }}|' k8s/deployment.yml
+          sed -i "s|image: altamsh/note-app:.*|image: altamsh/note-app:${{ env.VERSION }}|g" k8s/deployment.yml
 
       # update GitHub
       - name: Commit the changes
