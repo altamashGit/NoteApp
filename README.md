@@ -4,6 +4,8 @@ Overview
 NoteApp is a lightweight web application that allows users to create, view, and manage notes through a clean interface. The backend, built with 
 Node.js and Express, serves a RESTful API, while the frontend uses HTML, CSS, and JavaScript for a responsive experience. 
 The app is containerized with Docker and includes Kubernetes manifests for deployment.
+Added in  this project CI part by GitAction and CD with the Help of Argocd i setup all the requirements:
+![Image](https://github.com/user-attachments/assets/72cdc642-68f9-40fd-89dc-adc36f1919fc)
 
 
 Prerequisites:
