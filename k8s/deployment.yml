@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: note-app
-          image: altamsh/note-app:latest
+          image: altamsh/note-app:v20250604082510
           ports:
             - containerPort: 3000
           livenessProbe:
